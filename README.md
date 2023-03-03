@@ -83,3 +83,5 @@ The first command allows XWindows info to be passed between the Docker container
 ## Run Instructions
 
 To run your docker container after the initial build and run, first open a terminal and do ```xhost +```. Your new TUI container can be restarted from Docker Desktop or from the command line by doing ```docker start atui3```. Alternatively, ```docker compose up``` can be run from the location of the ```docker-compose.yml``` file.
+
+To access a ```bash``` shell within the ```atui3``` container, open a terminal and do ```docker exec -it atui3 /bin/bash```. This will allow you do bring up the root plots window, or to do other admin tasks within the container.
