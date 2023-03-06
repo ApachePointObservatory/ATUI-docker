@@ -32,7 +32,7 @@ Proceed to section ***All Platforms***.
 
 Do not install Docker from your distribution's package repositories. Follow the [instructions documented on Docker's website](https://docs.docker.com/engine/) to install Docker. You may either install the Docker Engine CLI or Docker Desktop.
 
-If you opt for Docker Desktop, follow the MacOS install instructions with regard to the ```docker-compose.yml``` file above (* *i.e.* * do not install XQuartz, and install pulseaudio as described in the following step).
+If you opt for Docker Desktop, follow the MacOS install instructions with regard to the ```docker-compose.yml``` file above (*i.e.* do not install XQuartz, and install pulseaudio as described in the following step).
 
 Install pulseaudio from your distribution's package repositories. Open a terminal and do ```pulseaudio -D --exit-idle-time=-1 --load=module-native-protocol-tcp``` to  start pulseaudio, then check your audio by doing ```pacmd play-sample 0 1```.
 
