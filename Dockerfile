@@ -26,6 +26,6 @@ RUN wget -O root_v6.28.00.tar.gz 		\
 	https://root.cern/download/root_v6.28.00.Linux-ubuntu22-x86_64-gcc11.3.tar.gz && \
 	tar -zxf root_v6.28.00.tar.gz && 	\
 	rm root_v6.28.00.tar.gz && 		\
-	/bin/bash -c "echo source /workdir/root/bin/thisroot.sh >> /root/.bashrc"
+	/bin/bash -c "echo 'cd /workdir/root && source bin/thisroot.sh && cd /workdir' >> /root/.bashrc"
 
 CMD ["python3", "python/TUI3/runtui.py"]

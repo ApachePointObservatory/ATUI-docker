@@ -4,6 +4,7 @@ services:
     build: .
     image: atui:3-beta-nix
     container_name: atui3
+    platform: linux/amd64 #needed for ROOT binary build amd64
     volumes:
       - /tmp/.X11-unix/:/tmp/.X11-unix                #uncomment for MacOS or Linux
       - ${HOME}/.config/pulse:/root/.config/pulse     #uncomment for MacOS or Linux
