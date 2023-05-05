@@ -10,10 +10,10 @@ services:
       - ${HOME}/.config/pulse:/root/.config/pulse     #uncomment for MacOS or Linux
       - image-downloads:/root:rw
     environment:
-      #- DISPLAY=<IP OF ETHERNET OR WIFI CARD>:0      #uncomment for MacOS
-      #- PULSE_SERVER=<IP OF ETHERNET OR WIFI CARD>   #uncomment for MacOS
-      - DISPLAY=${DISPLAY}                            #uncomment for Linux
-      - PULSE_SERVER=10.5.0.1                         #uncomment for Linux
+      - DISPLAY=host.docker.internal:0      #uncomment for MacOS
+      - PULSE_SERVER=host.docker.internal   #uncomment for MacOS
+      #- DISPLAY=${DISPLAY}                            #uncomment for Linux
+      #- PULSE_SERVER=10.5.0.1                         #uncomment for Linux
     networks:
       atui3_network:
         ipv4_address: 10.5.0.5
