@@ -12,17 +12,15 @@ Install [XQuartz](https://www.xquartz.org/) (mandatory). Open the XQuartz prefer
 
 Install pulseaudio using [Brew](https://formulae.brew.sh/formula/repo) (optional, if you want sound). Reboot your Mac. Open a terminal and do ```pulseaudio -D --exit-idle-time=-1 --load=module-native-protocol-tcp``` to  start pulseaudio, then check your audio by doing ```pacmd play-sample 0 1```.
 
-Edit the file ```docker-compose.yml```. Uncomment the lines that terminate in ```#uncomment for MacOS``` and enter the IP address for your network interface card where indicated.
-
-Example: if your network interface card's IP address is 192.168.3.5, the relevant lines of the ```docker-compose.yml``` file should look like:
+Edit the file ```docker-compose.yml```. Uncomment the lines that terminate in ```#uncomment for MacOS```. The relevant lines of the ```docker-compose.yml``` file should look like:
 ```
     volumes:
       - /tmp/.X11-unix/:/tmp/.X11-unix                #uncomment for MacOS or Linux
       - ${HOME}/.config/pulse:/root/.config/pulse     #uncomment for MacOS or Linux
       - image-downloads:/root:rw
     environment:
-      - DISPLAY=192.168.3.5:0      #uncomment for MacOS
-      - PULSE_SERVER=192.168.3.5   #uncomment for MacOS
+      - DISPLAY=host.docker.internal:0		#uncomment for MacOS
+      - PULSE_SERVER=host.docker.internal	#uncomment for MacOS
       #- DISPLAY=${DISPLAY}                            #uncomment for Linux
       #- PULSE_SERVER=10.3.0.1                         #uncomment for Linux
 ```
@@ -43,8 +41,8 @@ Edit the file ```docker-compose.yml```. Uncomment the lines that terminate in ``
       - ${HOME}/.config/pulse:/root/.config/pulse     #uncomment for MacOS or Linux
       - image-downloads:/root:rw
     environment:
-      #- DISPLAY=<IP OF ETHERNET OR WIFI CARD>:0      #uncomment for MacOS
-      #- PULSE_SERVER=<IP OF ETHERNET OR WIFI CARD>   #uncomment for MacOS
+      #- DISPLAY=host.docker.internal:0      #uncomment for MacOS
+      #- PULSE_SERVER=host.docker.internal:0   #uncomment for MacOS
       - DISPLAY=${DISPLAY}                            #uncomment for Linux
       - PULSE_SERVER=10.3.0.1                         #uncomment for Linux
 ```
