@@ -19,7 +19,7 @@ RUN apt-get update -y && 					\
 		libssl-dev libpng-dev libjpeg8-dev 		\
 		-y --no-install-recommends && 			\
 	apt-get clean
-RUN pip3 install numpy scipy Pillow matplotlib astropy pygame Pmw
+RUN pip3 install numpy Pillow matplotlib astropy pygame Pmw twisted
 RUN git clone -b 'v3.1.4twistedfix' https://github.com/ApachePointObservatory/TUI3.git python/TUI3
 ## Get the root framework, set it up.
 RUN wget -O root_v6.28.00.tar.gz 		\
