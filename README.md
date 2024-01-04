@@ -8,7 +8,7 @@ This is a repository that holds the configuration and build files needed run Apa
 
 Install [Docker Desktop](https://www.docker.com/) (mandatory).
 
-Install [XQuartz](https://www.xquartz.org/) (mandatory). Open the XQuartz preferences, go to the **Security** tab, and **Allow connections from network clients**. Close the window and reboot your Mac.
+Install [XQuartz](https://www.xquartz.org/) (mandatory). Open the XQuartz preferences, go to the **Security** tab, and check **Allow connections from network clients** and uncheck **Authenticate Connections**. Close the window and reboot your Mac.
 
 Install pulseaudio using [Brew](https://formulae.brew.sh/formula/repo) (optional, if you want sound). Reboot your Mac. Open a terminal and do ```pulseaudio -D --exit-idle-time=-1 --load=module-native-protocol-tcp``` to  start pulseaudio, then check your audio by doing ```pacmd play-sample 0 1```.
 
