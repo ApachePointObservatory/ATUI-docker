@@ -34,7 +34,7 @@ If you opt for Docker Desktop, follow the MacOS install instructions with regard
 
 Install pulseaudio from your distribution's package repositories. Open a terminal and do ```pulseaudio -D --exit-idle-time=-1 --load=module-native-protocol-tcp``` to  start pulseaudio, then check your audio by doing ```pacmd play-sample 0 1```.
 
-Edit the file ```docker-compose.yml```. Uncomment the lines that terminate in ```#uncomment for Linux```. The rlevant lines should look as follows
+Edit the file ```docker-compose.yml```. Uncomment the lines that terminate in ```#uncomment for Linux```. The relevant lines should look as follows
 ```
     volumes:
       - /tmp/.X11-unix/:/tmp/.X11-unix                #uncomment for MacOS or Linux
