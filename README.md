@@ -58,7 +58,7 @@ Download the the necessary source tree for Apollo from the Apollo3 git repositor
 
 That is, edit the following lines to look as follows:
 ```
-sys.path.append("/usr/local/lib/python3.11/site-packages")
+sys.path.append("/usr/local/lib/python3.10/dist-packages")
 ...
 path = "/workdir/python/TUIAdditions/Apollo/" # yes end backslashes!
 ...
