@@ -9,6 +9,7 @@ RUN ln -snf /usr/share/zoneinfo/UTC /etc/localtime && echo UTC > /etc/timezone
 ## Apollo needs to go into the home directory,
 ## which is /root for this docker image, unfortunately.
 COPY python/Apollo python/TUIAdditions/Apollo
+COPY catalog/apollo_cat.txt catalog/apollo_cat.txt
 ## Get Dependencies.
 RUN apt-get update -y && 					\
 	apt-get install python3 python3-pip python3-tk 		\
